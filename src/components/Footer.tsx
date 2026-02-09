@@ -3,28 +3,28 @@ import { Button } from "@/components/ui/button";
 
 const footerLinks = {
   product: [
-    { name: "Features", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "API", href: "#" },
-    { name: "Documentation", href: "#" },
+    { name: "Features", href: "/features" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "API", href: "/api-docs" },
+    { name: "Documentation", href: "/docs" },
   ],
   company: [
-    { name: "About Us", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
   ],
   resources: [
-    { name: "Help Center", href: "#" },
-    { name: "Community", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "Status", href: "#" },
+    { name: "Help Center", href: "/help" },
+    { name: "Community", href: "/community" },
+    { name: "Guides", href: "/guides" },
+    { name: "Status", href: "/status" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "Transparency", href: "#" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Transparency", href: "/transparency" },
   ],
 };
 
@@ -68,7 +68,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Links Columns */}
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
@@ -82,7 +82,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3">
@@ -95,7 +95,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-3">
@@ -108,7 +108,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-3">
@@ -122,7 +122,7 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
