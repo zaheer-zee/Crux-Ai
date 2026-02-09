@@ -1,8 +1,8 @@
-# Truth Weaver
+# Crux-AI
  
  ## Project info
  
- **Description**: Truth Weaver is an AI-powered fact-checking and misinformation detection platform.
+ **Description**: Crux-AI is an AI-powered fact-checking and misinformation detection platform.
  
  ## How can I edit this code?
  
