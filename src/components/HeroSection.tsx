@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 
 export const HeroSection = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   return (
     <section className="w-full bg-hero-bg py-16 md:py-24">
@@ -22,9 +24,9 @@ export const HeroSection = () => {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary-hover text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold shadow-md hover:shadow-lg transition-all"
-                  onClick={() => navigate('/login')}
+                  onClick={() => navigate(user ? '/profile' : '/login')}
                 >
-                  Login or Sign Up
+                  {user ? 'Go to Profile' : 'Login or Sign Up'}
                 </Button>
               </div>
             </div>
