@@ -14,6 +14,7 @@ import L from "leaflet";
 import { toast } from "sonner";
 
 // Fix for default marker icon
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
@@ -263,19 +264,19 @@ export default function CrisisAlerts() {
                     <Card
                       key={alert.id}
                       className={`p-5 hover:shadow-lg transition-all border-l-4 ${alert.severity === "CRITICAL" ? "border-l-amber-600 bg-amber-50 dark:bg-amber-950/20" :
-                          alert.severity === "HIGH" ? "border-l-orange-500 bg-orange-50 dark:bg-orange-950/20" :
-                            "border-l-primary bg-primary/5"
+                        alert.severity === "HIGH" ? "border-l-orange-500 bg-orange-50 dark:bg-orange-950/20" :
+                          "border-l-primary bg-primary/5"
                         }`}
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className={`p-2 rounded-full ${alert.severity === "CRITICAL" ? "bg-amber-500/20" :
-                              alert.severity === "HIGH" ? "bg-orange-500/20" :
-                                "bg-primary/20"
+                            alert.severity === "HIGH" ? "bg-orange-500/20" :
+                              "bg-primary/20"
                             }`}>
                             <AlertTriangle className={`h-5 w-5 ${alert.severity === "CRITICAL" ? "text-amber-600" :
-                                alert.severity === "HIGH" ? "text-orange-600" :
-                                  "text-primary"
+                              alert.severity === "HIGH" ? "text-orange-600" :
+                                "text-primary"
                               }`} />
                           </div>
                           <div>
