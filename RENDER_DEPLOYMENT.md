@@ -264,6 +264,32 @@ Render uses your root endpoint `/` for health checks. You can customize:
 
 ---
 
+## Preventing Shutdowns (Free Tier)
+
+Render's free tier spins down web services after 15 minutes of inactivity. This can cause a delay (cold start) of 30+ seconds for the next request. To prevent this:
+
+### Option 1: Use UptimeRobot (Recommended)
+1.  Go to [UptimeRobot](https://uptimerobot.com/) and create a free account.
+2.  Click **"Add New Monitor"**.
+3.  **Monitor Type**: HTTP(s).
+4.  **Friendly Name**: Truth Weaver Backend.
+5.  **URL**: `https://truth-weaver-backend.onrender.com` (or your actual URL).
+6.  **Monitoring Interval**: 5 minutes (or anything less than 15 minutes).
+7.  Click **"Create Monitor"**.
+
+### Option 2: Run a Local Keep-Alive Script
+We have provided a script `keep_alive.py` in the root directory. You can run this on your local machine to keep the backend active while you are developing.
+
+```bash
+# Run the script
+python keep_alive.py https://truth-weaver-backend.onrender.com
+```
+
+### Option 3: Upgrade to Paid Plan
+Upgrading to the "Starter" plan ($7/month) ensures your service never spins down.
+
+---
+
 ## Next Steps
 
 1. ✅ Deploy backend to Render
